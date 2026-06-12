@@ -24,15 +24,27 @@ const faqs = [
 export default function ContactoPage() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [form, setForm] = useState({ name:"", entity:"", role:"", email:"", phone:"", service:"", message:"" });
+  const [error, setError] = useState("");
+  const [form, setForm] = useState({ name:"", entity:"", role:"", email:"", service:"", message:"" });
   const [openFaq, setOpenFaq] = useState<number|null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    await new Promise(r => setTimeout(r, 1200));
-    setLoading(false);
-    setSubmitted(true);
+    setError("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error("Error al enviar");
+      setSubmitted(true);
+    } catch {
+      setError("Hubo un problema al enviar. Por favor escríbenos directamente a contacto@consisa.biz");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement|HTMLSelectElement|HTMLTextAreaElement>) => {
@@ -54,12 +66,9 @@ export default function ContactoPage() {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-
-            {/* Left — Info */}
             <div>
               <span className="badge mb-6">Información de contacto</span>
               <h2 className="section-title mb-8">¿Listo para conectar tu entidad con el futuro?</h2>
-
               <div className="space-y-6 mb-12">
                 {[
                   { icon:"👤", title:"Hernando Ferney Marín Rodríguez", sub:"CEO & Socio Fundador" },
@@ -79,24 +88,17 @@ export default function ContactoPage() {
                   </div>
                 ))}
               </div>
-
-              {/* FAQ */}
               <div>
                 <h3 className="text-xl font-bold text-[#1A1A2E] mb-6">Preguntas frecuentes</h3>
                 <div className="space-y-3">
                   {faqs.map((faq,i) => (
                     <div key={i} className="border border-gray-100 rounded-xl overflow-hidden">
-                      <button
-                        className="w-full text-left p-5 flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
-                        onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                      >
+                      <button className="w-full text-left p-5 flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors" onClick={() => setOpenFaq(openFaq === i ? null : i)}>
                         <span className="font-semibold text-[#1A1A2E] text-sm">{faq.q}</span>
                         <span className={`text-[#003087] font-bold text-lg transition-transform duration-200 ${openFaq===i?"rotate-45":"rotate-0"} flex-shrink-0`}>+</span>
                       </button>
                       {openFaq === i && (
-                        <div className="px-5 pb-5">
-                          <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
-                        </div>
+                        <div className="px-5 pb-5"><p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p></div>
                       )}
                     </div>
                   ))}
@@ -104,7 +106,6 @@ export default function ContactoPage() {
               </div>
             </div>
 
-            {/* Right — Form */}
             <div className="bg-gray-50 rounded-3xl p-8 lg:p-10 sticky top-24">
               {submitted ? (
                 <div className="text-center py-12">
@@ -143,6 +144,7 @@ export default function ContactoPage() {
                     <textarea name="message" value={form.message} onChange={handleChange} rows={3} placeholder="Describe brevemente tu proyecto..."
                       className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-[#003087] focus:ring-2 focus:ring-[#003087]/10 bg-white text-sm transition-all resize-none" />
                   </div>
+                  {error && <p className="text-[#E8401C] text-sm bg-red-50 px-4 py-3 rounded-xl">{error}</p>}
                   <button type="submit" disabled={loading} className="w-full btn-primary justify-center py-4 text-base disabled:opacity-70">
                     {loading ? (
                       <><span className="inline-block w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />Enviando...</>
@@ -155,7 +157,6 @@ export default function ContactoPage() {
           </div>
         </div>
       </section>
-
       <Footer />
     </main>
   );
