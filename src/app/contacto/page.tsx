@@ -62,10 +62,9 @@ export default function ContactoPage() {
 
               <div className="space-y-6 mb-12">
                 {[
-                  { icon:"👤", title:"Hernando Ferney Marín Rodríguez", sub:"CEO & Business Developer" },
-                  { icon:"✉️", title:"ceo@consisa.biz", sub:"Email directo CEO", href:"mailto:ceo@consisa.biz" },
+                  { icon:"👤", title:"Hernando Ferney Marín Rodríguez", sub:"CEO & Socio Fundador" },
+                  { icon:"✉️", title:"contacto@consisa.biz", sub:"Email corporativo", href:"mailto:contacto@consisa.biz" },
                   { icon:"📱", title:"+57 315 350 3014", sub:"WhatsApp disponible", href:"https://wa.me/573153503014" },
-                  { icon:"📞", title:"+57 602 2371451", sub:"Línea fija Cali" },
                   { icon:"📍", title:"Av. 4 Norte No. 6N-67, Edificio Siglo XXI, Of. 301", sub:"Cali, Valle del Cauca, Colombia" },
                 ].map((c,i) => (
                   <div key={i} className="flex items-start gap-4">
@@ -88,14 +87,14 @@ export default function ContactoPage() {
                   {faqs.map((faq,i) => (
                     <div key={i} className="border border-gray-100 rounded-xl overflow-hidden">
                       <button
-                        className="w-full text-left p-4 flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
+                        className="w-full text-left p-5 flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
                         onClick={() => setOpenFaq(openFaq === i ? null : i)}
                       >
                         <span className="font-semibold text-[#1A1A2E] text-sm">{faq.q}</span>
-                        <span className={`text-[#003087] font-bold text-lg transition-transform ${openFaq===i?"rotate-45":"rotate-0"}`}>+</span>
+                        <span className={`text-[#003087] font-bold text-lg transition-transform duration-200 ${openFaq===i?"rotate-45":"rotate-0"} flex-shrink-0`}>+</span>
                       </button>
                       {openFaq === i && (
-                        <div className="px-4 pb-4">
+                        <div className="px-5 pb-5">
                           <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
                         </div>
                       )}
