@@ -58,11 +58,9 @@ export default function Footer() {
               © 2008–2026 Consultoría y Sistemas S.A.S. — CONSISA. Todos los derechos reservados.<br className="md:hidden" />
               {" "}Av. 4 Norte No. 6N-67, Ed. Siglo XXI Of. 301, Cali, Colombia.
             </p>
-            <div className="flex items-center gap-4 text-white/40 text-sm">
-              <span>📞 +57 602 2371451</span>
-              <span>|</span>
-              <a href="mailto:ceo@consisa.biz" className="hover:text-white transition-colors">ceo@consisa.biz</a>
-            </div>
+            <a href="mailto:contacto@consisa.biz" className="text-white/40 text-sm hover:text-white transition-colors">
+              contacto@consisa.biz
+            </a>
           </div>
         </div>
       </div>
