@@ -61,7 +61,7 @@ const services = [
     badge: "Proyectos de gran escala",
     badgeColor: "bg-purple-50 text-purple-700",
     cta: "Conocer metodología",
-    img: "https://images.unsplash.com/photo-1508098682722-e99c643e7f0b?w=800&q=80",
+    img: "https://images.unsplash.com/photo-1459865264687-595d652de67e?w=800&q=80",
     tags: ["ERP","CRM","Fiducia","Control EPC"],
   },
 ];
@@ -79,26 +79,26 @@ export default function ServiciosPage() {
         imageAlt="Edificios sector público Colombia"
       />
 
-      <section className="py-24 bg-white">
+      <section className="py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-16">
+          <div className="space-y-28">
             {services.map((s, i) => (
-              <div key={i} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${i % 2 !== 0 ? "lg:flex-row-reverse" : ""}`}>
+              <div key={i} className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div className={i % 2 !== 0 ? "lg:order-2" : ""}>
-                  <span className={`inline-block text-xs font-semibold px-3 py-1.5 rounded-full mb-4 ${s.badgeColor}`}>{s.badge}</span>
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="text-4xl">{s.icon}</span>
-                    <h2 className="text-2xl lg:text-3xl font-bold text-[#1A1A2E]">{s.title}</h2>
+                  <span className={`inline-block text-xs font-semibold px-4 py-2 rounded-full mb-6 ${s.badgeColor}`}>{s.badge}</span>
+                  <div className="flex items-center gap-4 mb-6">
+                    <span className="text-5xl">{s.icon}</span>
+                    <h2 className="text-2xl lg:text-3xl font-bold text-[#1A1A2E] leading-snug">{s.title}</h2>
                   </div>
-                  <p className="text-gray-600 text-lg leading-relaxed mb-6">{s.body}</p>
-                  <div className="flex flex-wrap gap-2 mb-8">
+                  <p className="text-gray-600 text-lg leading-relaxed mb-8">{s.body}</p>
+                  <div className="flex flex-wrap gap-2 mb-10">
                     {s.tags.map(tag => (
-                      <span key={tag} className="bg-gray-100 text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full">{tag}</span>
+                      <span key={tag} className="bg-gray-100 text-gray-600 text-sm font-medium px-4 py-2 rounded-full">{tag}</span>
                     ))}
                   </div>
                   <Link href="/contacto" className="btn-primary">{s.cta} →</Link>
                 </div>
-                <div className={`relative rounded-2xl overflow-hidden shadow-xl h-72 lg:h-96 ${i % 2 !== 0 ? "lg:order-1" : ""}`}>
+                <div className={`relative rounded-3xl overflow-hidden shadow-2xl h-80 lg:h-[420px] ${i % 2 !== 0 ? "lg:order-1" : ""}`}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={s.img} alt={s.title} className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-br from-[#003087]/20 to-transparent" />
@@ -109,10 +109,10 @@ export default function ServiciosPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-[#003087]">
+      <section className="py-24 bg-[#003087]">
         <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-black text-white mb-4">¿No sabes cuál servicio necesitas?</h2>
-          <p className="text-white/70 text-lg mb-8">Agenda una consulta gratuita y te orientamos sin compromiso.</p>
+          <h2 className="text-3xl lg:text-4xl font-black text-white mb-6">¿No sabes cuál servicio necesitas?</h2>
+          <p className="text-white/70 text-lg mb-10">Agenda una consulta gratuita y te orientamos sin compromiso.</p>
           <Link href="/contacto" className="btn-accent">Consulta gratuita →</Link>
         </div>
       </section>
