@@ -1,26 +1,78 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --consisa-blue: #003087;
+  --consisa-blue-light: #0066CC;
+  --consisa-red: #E8401C;
+  --consisa-dark: #1A1A2E;
+  --consisa-green: #00A86B;
+  --consisa-gold: #F59E0B;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--consisa-dark);
+  background: #ffffff;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-consisa-blue text-white font-bold px-8 py-3.5 rounded-lg transition-all duration-200 hover:bg-consisa-blue-light hover:-translate-y-0.5 hover:shadow-lg inline-flex items-center gap-2;
+  }
+  .btn-secondary {
+    @apply bg-transparent text-consisa-blue border-2 border-consisa-blue font-semibold px-7 py-3 rounded-lg transition-all duration-200 hover:bg-consisa-blue hover:text-white inline-flex items-center gap-2;
+  }
+  .btn-accent {
+    @apply bg-consisa-red text-white font-bold px-8 py-3.5 rounded-lg transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5 inline-flex items-center gap-2;
+  }
+  .service-card {
+    @apply bg-white rounded-2xl p-8 border border-gray-100 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-consisa-blue;
+  }
+  .kpi-number {
+    @apply text-5xl lg:text-6xl font-extrabold text-consisa-blue leading-none;
+  }
+  .kpi-label {
+    @apply text-xs font-medium text-gray-500 uppercase tracking-widest mt-2;
+  }
+  .section-title {
+    @apply text-3xl lg:text-4xl font-bold text-consisa-dark leading-tight;
+  }
+  .badge {
+    @apply inline-flex items-center gap-1.5 bg-blue-50 text-consisa-blue rounded-full px-4 py-1.5 text-sm font-semibold;
+  }
+  .badge-new {
+    @apply inline-flex items-center gap-1.5 bg-consisa-red text-white rounded-full px-4 py-1.5 text-sm font-semibold;
+  }
+  .badge-success {
+    @apply inline-flex items-center gap-1.5 bg-green-50 text-consisa-green rounded-full px-4 py-1.5 text-sm font-semibold;
+  }
+}
+
+.hero-pattern {
+  background-image: radial-gradient(circle at 80% 50%, rgba(232,64,28,0.12) 0%, transparent 60%),
+                    radial-gradient(circle at 20% 80%, rgba(0,102,204,0.15) 0%, transparent 50%);
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
