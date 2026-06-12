@@ -2,18 +2,21 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
-  { href: "#servicios", label: "Servicios" },
-  { href: "#nosotros", label: "Nosotros" },
-  { href: "#experiencia", label: "Experiencia" },
-  { href: "#equipo", label: "Equipo" },
-  { href: "#contacto", label: "Contacto" },
+  { href: "/servicios", label: "Servicios" },
+  { href: "/nosotros", label: "Nosotros" },
+  { href: "/experiencia", label: "Experiencia" },
+  { href: "/equipo", label: "Equipo" },
+  { href: "/contacto", label: "Contacto" },
 ];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -21,83 +24,61 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const navBg = isHome
+    ? scrolled ? "bg-white/95 backdrop-blur-md shadow-md" : "bg-transparent"
+    : "bg-white shadow-md";
+
+  const linkColor = isHome && !scrolled ? "text-white/90 hover:text-white" : "text-[#1A1A2E] hover:text-[#003087]";
+
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-md"
-          : "bg-transparent"
-      }`}
-    >
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${navBg}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image
               src="/logo-consisa.jpg"
-              alt="CONSISA — Consultoría y Sistemas S.A.S."
+              alt="CONSISA"
               width={160}
               height={60}
               className="h-12 w-auto object-contain"
               priority
             />
           </Link>
-
-          {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition-colors duration-200 ${
-                  scrolled
-                    ? "text-consisa-dark hover:text-consisa-blue"
-                    : "text-white/90 hover:text-white"
-                }`}
+                className={`text-sm font-medium transition-colors duration-200 ${linkColor} ${pathname === link.href ? "font-bold" : ""}`}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
-            <a
-              href="#contacto"
-              className="btn-primary text-sm py-2.5 px-6"
-            >
+            <Link href="/contacto" className="btn-primary text-sm py-2.5 px-6">
               Habla con un experto →
-            </a>
+            </Link>
           </div>
-
-          {/* Mobile menu button */}
-          <button
-            className="md:hidden p-2"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Menú"
-          >
-            <div className={`w-6 h-0.5 mb-1.5 transition-all ${scrolled ? "bg-consisa-dark" : "bg-white"}`} />
-            <div className={`w-6 h-0.5 mb-1.5 transition-all ${scrolled ? "bg-consisa-dark" : "bg-white"}`} />
-            <div className={`w-6 h-0.5 transition-all ${scrolled ? "bg-consisa-dark" : "bg-white"}`} />
+          <button className="md:hidden p-2" onClick={() => setMenuOpen(!menuOpen)} aria-label="Menú">
+            <div className={`w-6 h-0.5 mb-1.5 ${isHome && !scrolled ? "bg-white" : "bg-[#1A1A2E]"}`} />
+            <div className={`w-6 h-0.5 mb-1.5 ${isHome && !scrolled ? "bg-white" : "bg-[#1A1A2E]"}`} />
+            <div className={`w-6 h-0.5 ${isHome && !scrolled ? "bg-white" : "bg-[#1A1A2E]"}`} />
           </button>
         </div>
-
-        {/* Mobile menu */}
         {menuOpen && (
           <div className="md:hidden bg-white rounded-xl shadow-xl p-6 mb-4 border border-gray-100">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
-                className="block py-3 text-consisa-dark font-medium border-b border-gray-50 hover:text-consisa-blue"
+                className="block py-3 text-[#1A1A2E] font-medium border-b border-gray-50 hover:text-[#003087]"
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
-            <a
-              href="#contacto"
-              className="btn-primary w-full justify-center mt-4 text-sm"
-              onClick={() => setMenuOpen(false)}
-            >
+            <Link href="/contacto" className="btn-primary w-full justify-center mt-4 text-sm" onClick={() => setMenuOpen(false)}>
               Habla con un experto →
-            </a>
+            </Link>
           </div>
         )}
       </div>
