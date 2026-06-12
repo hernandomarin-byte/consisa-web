@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "CONSISA — Consultoría y Sistemas S.A.S. | ERP · IA · Sector Público Colombia",
@@ -19,19 +20,26 @@ export const metadata: Metadata = {
     title: "CONSISA — ERP · IA · Sector Público Colombia",
     description: "17 años transformando el sector público colombiano con Odoo, SAP e IA Generativa.",
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  robots: { index: true, follow: true },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es">
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-1CPVHWHPS4"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-1CPVHWHPS4');
+          `}
+        </Script>
+      </head>
       <body className="antialiased">{children}</body>
     </html>
   );
