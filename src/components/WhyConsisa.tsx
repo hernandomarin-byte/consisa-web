@@ -26,7 +26,7 @@ const differentiators = [
   {
     number: "05",
     title: "Escala desde el municipio más pequeño",
-    body: "GRP Odoo desde USD 200/mes. SRI GovTech accesible para municipios categoría 4-6. Tecnología de clase mundial a precio colombiano. El tamaño de tu entidad no es una barrera.",
+    body: "GRP Odoo bajo modelo SaaS por entidad. SRI GovTech accesible para municipios categoría 4-6. Tecnología de clase mundial a precio colombiano. El tamaño de tu entidad no es una barrera.",
     icon: "📈",
   },
   {

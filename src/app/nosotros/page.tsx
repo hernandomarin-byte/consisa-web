@@ -21,7 +21,7 @@ const eraIA = [
 const productos = [
   { name: "GRP Odoo", desc: "Cadena de valor del gasto y del ingreso" },
   { name: "MFIP", desc: "Modelo financiero para estructurar proyectos" },
-  { name: "AHP", desc: "Decisiones multicriterio" },
+  { name: "AHP", desc: "Decisiones inteligentes, soportadas con AHP" },
   { name: "FacturAP", desc: "Facturación electrónica DIAN" },
   { name: "SRI GovTech", desc: "IA normativa" },
   { name: "GTTP", desc: "Gestor tributario territorial" },
@@ -32,7 +32,7 @@ const differentiators = [
   { icon: "🤖", title: "IA que ya opera, no que se promete", body: "Piloto validado en una entidad territorial, facturación electrónica procesando 681 documentos con 100% de éxito y GRP Odoo operativo en Google Cloud." },
   { icon: "🇨🇴", title: "Conocemos el Estado colombiano por dentro", body: "Gobernaciones, Alcaldías, EMCALI, ISS. Entendemos MIPG, MECI, SIIF y los marcos normativos que los rodean." },
   { icon: "👥", title: "Equipo senior", body: "Promedio de 27 años de experiencia. Magísteres en gobierno, doctorandos en ciencia de datos y expertos en tributación territorial." },
-  { icon: "📈", title: "Escala desde el municipio más pequeño", body: "GRP Odoo desde USD 200/mes. Tecnología de clase mundial a precio colombiano para entidades de cualquier categoría." },
+  { icon: "📈", title: "Escala desde el municipio más pequeño", body: "GRP Odoo bajo modelo SaaS por entidad. Tecnología de clase mundial a precio colombiano, pensada para entidades de cualquier categoría." },
   { icon: "⚡", title: "Operador BPO, no revendedor", body: "No vendemos licencias: operamos los procesos con una metodología propia de 10 módulos integrados." },
 ];
 

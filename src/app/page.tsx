@@ -50,7 +50,7 @@ export default function Home() {
             <span className="badge mb-4">Agencia IA</span>
             <h2 className="section-title mb-4">Productos que construimos para Colombia</h2>
             <p className="text-gray-500 text-lg max-w-2xl mx-auto">
-              GRP Odoo, MFIP, AHP, FacturAP, SRI GovTech y GTTP: soluciones propias para el sector público.
+              GRP Odoo, MFIP, AHP (decisiones inteligentes, soportadas con AHP), FacturAP, SRI GovTech y GTTP: soluciones propias para el sector público.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -84,7 +84,7 @@ export default function Home() {
           <h2 className="text-3xl lg:text-5xl font-black text-white mb-4">IA en producción. Resultados reales.</h2>
           <p className="text-white/70 text-lg mb-12">Piloto SRI GovTech — Entidad territorial piloto</p>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
-            {[["900","Artículos vectorizados"],["100","Brechas detectadas"],["$480M","COP recuperación potencial"],["414%","ROI fiscalización"]].map(([v, l], i) => (
+            {[["900","Artículos vectorizados"],["100","Brechas detectadas"],["275","Páginas de estatuto"],["Claude","IA normativa con Claude API"]].map(([v, l], i) => (
               <div key={i} className="bg-white rounded-2xl p-7 text-center">
                 <div className={`text-4xl font-extrabold mb-2 ${i === 2 ? "text-[#00A86B]" : i === 3 ? "text-[#F59E0B]" : i === 1 ? "text-[#E8401C]" : "text-[#003087]"}`}>{v}</div>
                 <div className="text-xs text-gray-500 uppercase tracking-wider">{l}</div>

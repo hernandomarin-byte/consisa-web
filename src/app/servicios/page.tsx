@@ -23,7 +23,7 @@ const consultoria = [
 const agencia = [
   { icon: "📊", name: "GRP Odoo", desc: "Cadena de valor del gasto y del ingreso para entidades públicas." },
   { icon: "🏗️", name: "MFIP", desc: "Modelo financiero para la estructuración de proyectos." },
-  { icon: "⚖️", name: "AHP", desc: "Plataforma de decisiones multicriterio (Proceso Analítico Jerárquico)." },
+  { icon: "⚖️", name: "AHP", desc: "Toma decisiones inteligentes y soportadas con AHP, el Proceso Analítico Jerárquico." },
   { icon: "🧾", name: "FacturAP", desc: "Facturación electrónica DIAN UBL 2.1 automatizada." },
   { icon: "🔎", name: "SRI GovTech", desc: "IA normativa sobre estatutos tributarios territoriales." },
   { icon: "🗺️", name: "GTTP", desc: "Gestor Tributario Territorial Público." },

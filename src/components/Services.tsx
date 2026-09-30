@@ -14,7 +14,7 @@ const services = [
     icon: "📊",
     title: "GRP Odoo — Control Presupuestal SaaS",
     body: "El módulo de gestión presupuestal pública que cumple el Decreto 111/1996. Multi-tenant, en Google Cloud, disponible para los 1.100+ municipios y 32 departamentos de Colombia.",
-    badge: "🆕 SaaS · Desde USD 200/mes",
+    badge: "🆕 SaaS · Cotización por entidad",
     badgeType: "new",
     cta: "Solicitar demo →",
     href: "#contacto",
@@ -24,7 +24,7 @@ const services = [
   {
     icon: "⚖️",
     title: "SRI GovTech — IA Normativa",
-    body: "De la norma al sistema. RAG sobre estatutos tributarios, brechas normativas automáticas y asistente jurídico 24/7 con Claude AI. Piloto validado: 900 artículos vectorizados, $480M COP de recuperación potencial.",
+    body: "De la norma al sistema. RAG sobre estatutos tributarios, brechas normativas automáticas y asistente jurídico 24/7 con Claude AI. Piloto validado: 900 artículos vectorizados.",
     badge: "✅ Piloto validado — entidad territorial piloto 2026",
     badgeType: "success",
     cta: "Ver resultados →",

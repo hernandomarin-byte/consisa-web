@@ -3,42 +3,48 @@ import Footer from "@/components/Footer";
 import PageHero from "@/components/ui/PageHero";
 import Link from "next/link";
 
-const clients = [
-  { name: "Gobernación del Valle del Cauca", desc: "Múltiples contratos 2008–2024. Implementación SAP financiero y presupuestal.", icon: "🏛️", color: "border-[#003087]" },
-  { name: "Municipio de Santiago de Cali", desc: "SAP PS, BPM Catastro-Predial. Proyecto World Bank-IFC/DIAN.", icon: "🏙️", color: "border-[#E8401C]" },
-  { name: "EMCALI", desc: "Contratos 0557-2013 y 0376-2014. Gestión financiera y presupuestal.", icon: "⚡", color: "border-[#00A86B]" },
-  { name: "Gobernación de Cundinamarca", desc: "Implementación SAP sector público. Gestión presupuestal y financiera.", icon: "🏔️", color: "border-[#003087]" },
-  { name: "ISS / Colpensiones", desc: "Consultoría SAP para el sistema pensional colombiano.", icon: "👴", color: "border-[#F59E0B]" },
-  { name: "ANTV", desc: "Autoridad Nacional de Televisión. Implementación ERP.", icon: "📺", color: "border-purple-500" },
-  { name: "World Bank — IFC / DIAN", desc: "Proyecto de modernización tributaria. Catastro predial Cali.", icon: "🌐", color: "border-[#003087]" },
-  { name: "IMPRETIC EICE", desc: "Empresa de Recursos Tecnológicos Valle del Cauca.", icon: "💻", color: "border-[#E8401C]" },
+const sapTimeline = [
+  { year: "2008–2009", entity: "Gobernación de Cundinamarca", desc: "Soporte funcional especializado para el cierre de vigencia 2008 y la apertura de 2009 en el sistema SAP." },
+  { year: "2010", entity: "Gobernación de Cundinamarca", desc: "Actualización de procesos y plan de gestión del cambio para la estabilización y sostenibilidad del sistema SAP." },
+  { year: "2010", entity: "Gobernación del Valle del Cauca", desc: "Banco de proyectos y gestión de proyectos con SAP Project System (PS): gestión del cambio, ajuste de procesos y soporte pos-productivo." },
+  { year: "2012", entity: "Autoridad Nacional de Televisión — ANTV", desc: "Asesoría financiera, presupuestal y económica en la elaboración del Estatuto Presupuestal." },
+  { year: "2013–2014", entity: "Municipio de Santiago de Cali — EMCALI", desc: "Gerencia de proyecto y gestión del cambio del módulo PS; consultoría funcional SAP en rentas (PSCD) y core financiero." },
+  { year: "2015–2024", entity: "Automatización de procesos en Cali", desc: "Solución BPM de SAP para automatizar e integrar los procesos de Catastro e Impuesto Predial en la Alcaldía de Cali (World Bank — IFC)." },
+  { year: "2015–2024", entity: "Instituto de Seguros Sociales — ISS", desc: "Solución para la autosostenibilidad del conocimiento funcional y misional de los aplicativos, en la transición hacia Colpensiones." },
+  { year: "2016", entity: "Gobernación del Valle del Cauca", desc: "Actualización de New GL en SAP y mejora del banco de proyectos de inversión en los módulos PS y PPM." },
+  { year: "2015–2024", entity: "Gobernación del Valle — Gestión de deudores", desc: "Solución SAP para identificar y controlar los deudores por cada concepto de las rentas departamentales." },
+  { year: "2015–2024", entity: "IMPRETIC EICE", desc: "Mantenimiento evolutivo, soporte y sostenibilidad de herramientas de información financiera: deudores, contratación, deuda pública y tesorería." },
+  { year: "2020–2023", entity: "Gobernación del Valle — Plan de Desarrollo", desc: "Actualización del sistema de gestión financiero territorial para el Plan “Valle Invencible”." },
 ];
 
 const aiProjects = [
   {
     title: "SRI GovTech — Entidad territorial piloto",
     date: "Mayo 2026",
-    desc: "Motor RAG con Claude API + Vertex AI embeddings + pgvector. Vectorización completa del estatuto tributario municipal (275 páginas).",
-    kpis: [["900","Artículos vectorizados"],["100","Brechas detectadas"],["$480M","COP recuperación"],["414%","ROI ICA"]],
-    tags: ["Claude API","Vertex AI","pgvector","Google Cloud"],
+    status: "Piloto validado",
+    desc: "Motor RAG con Claude API, embeddings de Vertex AI y pgvector. Vectorización completa del estatuto tributario municipal (275 páginas) para consulta normativa y detección de brechas.",
+    kpis: [["900", "Artículos vectorizados"], ["100", "Brechas detectadas"], ["275", "Páginas de estatuto"], ["Piloto", "Entidad territorial"]],
+    tags: ["Claude API", "Vertex AI", "pgvector", "Google Cloud"],
     color: "border-[#00A86B]",
     img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
   },
   {
-    title: "Sistema Facturación Electrónica",
+    title: "FacturAP — Automatización de facturación electrónica",
     date: "Abril 2026",
-    desc: "Pipeline Python automático. Gmail API + DIAN UBL 2.1 → Excel libro de compras. Procesamiento diario automatizado.",
-    kpis: [["681","Documentos procesados"],["100%","Tasa de éxito"],["Diario","Procesamiento"],["0","Errores manuales"]],
-    tags: ["Python","Gmail API","DIAN UBL 2.1","Automatización"],
+    status: "Validado con histórico real",
+    desc: "Pipeline en Python que descarga los adjuntos de facturación electrónica desde Gmail, lee los XML DIAN UBL 2.1 y genera el libro de compras en Excel. Procesó el histórico completo de la cuenta sin errores.",
+    kpis: [["681", "Documentos del histórico"], ["0", "Documentos con error"], ["3", "Tipos: factura, NC, ND"], ["UBL 2.1", "Estándar DIAN"]],
+    tags: ["Python", "Gmail API", "DIAN UBL 2.1", "Excel"],
     color: "border-[#003087]",
     img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80",
   },
   {
     title: "GRP Odoo — Google Cloud",
     date: "2026",
-    desc: "Módulo consisa_budget_co en producción. VM e2-standard-2 · Cloud SQL PostgreSQL 15 · IP estática. Ya operativo para entidades territoriales.",
-    kpis: [["Odoo 17","Plataforma"],["GCP","Infraestructura"],["USD 200","Desde /mes"],["1.100+","Municipios objetivo"]],
-    tags: ["Odoo 17","Google Cloud","PostgreSQL 15","Cloud SQL"],
+    status: "MVP operativo",
+    desc: "Módulo consisa_budget_co sobre Odoo 17 desplegado en Google Cloud. Cubre el ciclo presupuestal Apropiación → CDP → RP → PAC → Pago con integración contable y validaciones normativas (Decreto 111/1996, Ley 80/1993).",
+    kpis: [["Odoo 17", "Plataforma"], ["GCP", "Infraestructura"], ["CDP→Pago", "Ciclo presupuestal"], ["1.100+", "Municipios objetivo"]],
+    tags: ["Odoo 17", "Google Cloud", "PostgreSQL 15", "Cloud SQL"],
     color: "border-[#E8401C]",
     img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80",
   },
@@ -49,81 +55,107 @@ export default function ExperienciaPage() {
     <main>
       <Navbar />
       <PageHero
-        badge="📋 Casos de Éxito"
-        title="17 años de proyectos"
-        titleAccent="reales en Colombia"
-        subtitle="Hemos trabajado con las entidades más importantes del sector público colombiano. Nuestra credencial no es un certificado — son los resultados medibles en cada proyecto."
+        badge="📋 Experiencia"
+        title="Dos eras,"
+        titleAccent="una misma misión pública"
+        subtitle="Desde 2008 modernizamos la gestión pública colombiana con SAP. Desde 2024 lo hacemos también con Odoo e Inteligencia Artificial, a través de nuestra Agencia IA."
         image="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1400&q=80"
         imageAlt="Edificio institucional Colombia"
       />
 
-      {/* Proyectos IA */}
-      <section className="py-24 bg-white">
+      {/* Puente entre eras */}
+      <section className="py-16 bg-[#F8FAFC]">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <a href="#era-sap" className="block bg-white rounded-2xl p-8 border-t-4 border-[#003087] shadow-sm hover:shadow-lg transition">
+            <div className="text-sm font-bold tracking-widest text-gray-400 mb-2">ANTES · 2008–2023</div>
+            <h2 className="text-2xl font-bold text-[#003087] mb-3">La era SAP</h2>
+            <p className="text-gray-600 leading-relaxed">Implementación y soporte de SAP en gobernaciones, alcaldías y entidades nacionales.</p>
+          </a>
+          <a href="#era-ia" className="block bg-white rounded-2xl p-8 border-t-4 border-[#E8401C] shadow-sm hover:shadow-lg transition">
+            <div className="text-sm font-bold tracking-widest text-gray-400 mb-2">DESPUÉS · 2024–HOY</div>
+            <h2 className="text-2xl font-bold text-[#E8401C] mb-3">Odoo + Agencia IA</h2>
+            <p className="text-gray-600 leading-relaxed">Productos propios sobre Odoo, Google Cloud y Claude para el sector público.</p>
+          </a>
+        </div>
+      </section>
+
+      {/* Era SAP */}
+      <section id="era-sap" className="py-24 bg-white scroll-mt-24">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="badge mb-4">2008 – 2023</span>
+            <h2 className="section-title mb-4">La era SAP: 15 años de proyectos reales</h2>
+            <p className="text-gray-500 text-lg max-w-2xl mx-auto">Una credencial construida contrato a contrato con entidades públicas colombianas.</p>
+          </div>
+          <ol className="space-y-8">
+            {sapTimeline.map((t, i) => (
+              <li key={i} className="grid grid-cols-1 md:grid-cols-[170px_1fr] gap-4 md:gap-10 bg-gray-50 rounded-2xl p-6 md:p-8 border-l-4 border-[#003087]">
+                <div className="text-xl font-extrabold text-[#003087] leading-tight">{t.year}</div>
+                <div>
+                  <h3 className="text-lg font-bold text-[#1A1A2E] mb-2">{t.entity}</h3>
+                  <p className="text-gray-600 leading-relaxed">{t.desc}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* Era IA */}
+      <section id="era-ia" className="py-24 bg-[#F8FAFC] scroll-mt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="badge mb-4">IA en Producción 2026</span>
-            <h2 className="section-title mb-4">Proyectos con resultados medibles</h2>
-            <p className="text-gray-500 text-lg max-w-2xl mx-auto">No prometemos IA. La desplegamos y medimos sus resultados.</p>
+            <span className="badge mb-4">2024 – HOY</span>
+            <h2 className="section-title mb-4">La era Agencia IA: productos propios</h2>
+            <p className="text-gray-500 text-lg max-w-2xl mx-auto">No prometemos IA. La construimos, la probamos con datos reales y medimos sus resultados.</p>
           </div>
-          <div className="space-y-16">
+          <div className="space-y-20">
             {aiProjects.map((p, i) => (
-              <div key={i} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center`}>
+              <div key={i} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className={i % 2 !== 0 ? "lg:order-2" : ""}>
-                  <div className="flex items-center gap-3 mb-2">
+                  <div className="flex items-center gap-3 mb-3">
                     <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">{p.date}</span>
+                    <span className="text-xs font-semibold bg-green-50 text-green-700 rounded-full px-3 py-1">{p.status}</span>
                   </div>
                   <h3 className="text-2xl lg:text-3xl font-bold text-[#1A1A2E] mb-4">{p.title}</h3>
                   <p className="text-gray-600 text-lg leading-relaxed mb-6">{p.desc}</p>
                   <div className="grid grid-cols-2 gap-4 mb-6">
-                    {p.kpis.map(([v,l],ki) => (
-                      <div key={ki} className={`bg-gray-50 rounded-xl p-4 border-l-4 ${p.color}`}>
+                    {p.kpis.map(([v, l], ki) => (
+                      <div key={ki} className={`bg-white rounded-xl p-4 border-l-4 ${p.color}`}>
                         <div className="text-2xl font-extrabold text-[#003087]">{v}</div>
-                        <div className="text-xs text-gray-500 uppercase tracking-wider mt-1">{l}</div>
+                        <div className="text-sm text-gray-500">{l}</div>
                       </div>
                     ))}
                   </div>
                   <div className="flex flex-wrap gap-2">
-                    {p.tags.map(tag => (
-                      <span key={tag} className="bg-gray-100 text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full">{tag}</span>
+                    {p.tags.map((tag) => (
+                      <span key={tag} className="text-xs bg-white border border-gray-200 text-gray-600 rounded-full px-3 py-1">{tag}</span>
                     ))}
                   </div>
                 </div>
-                <div className={`relative rounded-2xl overflow-hidden shadow-xl h-80 ${i % 2 !== 0 ? "lg:order-1" : ""}`}>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={p.img} alt={p.title} className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#003087]/20 to-transparent" />
+                <div className={i % 2 !== 0 ? "lg:order-1" : ""}>
+                  <div
+                    className="h-80 rounded-2xl bg-cover bg-center shadow-lg"
+                    style={{ backgroundImage: `url(${p.img})` }}
+                    role="img"
+                    aria-label={p.title}
+                  />
                 </div>
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Clientes */}
-      <section className="py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="badge mb-4">Clientes</span>
-            <h2 className="section-title mb-4">Confianza construida en 17 años</h2>
-            <p className="text-gray-500 text-lg max-w-2xl mx-auto">Entidades que han confiado en CONSISA para sus proyectos de transformación digital.</p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {clients.map((c, i) => (
-              <div key={i} className={`bg-white rounded-2xl p-6 border-t-4 ${c.color} shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1`}>
-                <span className="text-3xl mb-4 block">{c.icon}</span>
-                <h3 className="font-bold text-[#1A1A2E] mb-2 text-sm">{c.name}</h3>
-                <p className="text-gray-500 text-xs leading-relaxed">{c.desc}</p>
-              </div>
-            ))}
+          <div className="text-center mt-16">
+            <Link href="/productos" className="btn-primary">Ver todos los productos</Link>
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-[#003087]">
+      {/* CTA */}
+      <section className="py-24 bg-[#003087]">
         <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-black text-white mb-4">¿Tu entidad podría ser el próximo caso de éxito?</h2>
-          <p className="text-white/70 text-lg mb-8">Agenda una consulta gratuita y evaluamos tu situación sin compromiso.</p>
-          <Link href="/contacto" className="btn-accent">Hablar con un experto →</Link>
+          <h2 className="text-3xl lg:text-4xl font-black text-white mb-6">¿Modernizamos tu entidad?</h2>
+          <p className="text-white/80 text-lg mb-10">Cuéntanos tu reto: del ERP a la Inteligencia Artificial, te acompañamos.</p>
+          <Link href="/contacto" className="btn-accent">Hablemos</Link>
         </div>
       </section>
 

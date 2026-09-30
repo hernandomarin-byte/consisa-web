@@ -1,8 +1,8 @@
 const kpis = [
   { value: "900", label: "Artículos vectorizados", color: "text-consisa-blue" },
   { value: "100", label: "Brechas normativas detectadas", color: "text-consisa-red" },
-  { value: "$480M", label: "COP recuperación potencial", color: "text-consisa-green" },
-  { value: "414%", label: "ROI fiscalización ICA", color: "text-consisa-gold" },
+  { value: "275", label: "Páginas de estatuto", color: "text-consisa-green" },
+  { value: "Piloto", label: "Validado", color: "text-consisa-gold" },
 ];
 
 export default function CaseStudy() {

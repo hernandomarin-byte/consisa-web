@@ -16,7 +16,7 @@ const services = [
 
 const faqs = [
   { q: "¿Cuánto tiempo toma una implementación Odoo?", a: "Dependiendo del alcance, entre 3 y 6 meses para una implementación estándar en una entidad territorial." },
-  { q: "¿GRP Odoo funciona para municipios categoría 6?", a: "Sí. GRP Odoo fue diseñado específicamente para ser asequible para municipios de cualquier categoría, desde USD 200/mes." },
+  { q: "¿GRP Odoo funciona para municipios categoría 6?", a: "Sí. GRP Odoo fue diseñado específicamente para ser asequible para municipios de cualquier categoría, bajo un modelo SaaS por entidad. Escríbenos y te enviamos una cotización." },
   { q: "¿Qué diferencia a SRI GovTech de otros sistemas tributarios?", a: "SRI GovTech usa IA Generativa (Claude API) para detectar brechas normativas automáticamente — algo que ningún sistema tributario tradicional hace." },
   { q: "¿CONSISA sigue haciendo proyectos SAP?", a: "Sí. Tenemos más de 17 años de experiencia SAP y seguimos prestando soporte y consultoría para clientes con implementaciones SAP activas." },
 ];
