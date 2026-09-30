@@ -22,7 +22,7 @@ const productos = [
   { name: "GRP Odoo", desc: "Cadena de valor del gasto y del ingreso" },
   { name: "MFIP", desc: "Modelo financiero para estructurar proyectos" },
   { name: "AHP", desc: "Decisiones inteligentes, soportadas con AHP" },
-  { name: "FacturAP", desc: "Facturación electrónica DIAN" },
+  { name: "FacturAP", desc: "Automatización de facturación electrónica recibida" },
   { name: "SRI GovTech", desc: "IA normativa" },
   { name: "GTTP", desc: "Gestor tributario territorial" },
 ];

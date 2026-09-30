@@ -40,7 +40,7 @@ const agenciaIA = [
   {
     icon: "🧾",
     name: "FacturAP",
-    tagline: "Facturación Electrónica DIAN",
+    tagline: "Automatización de facturación electrónica recibida",
     desc: "Automatización de la facturación electrónica recibida bajo el estándar DIAN UBL 2.1. Pipeline Python que descarga los adjuntos XML desde Gmail, extrae los datos de facturas, notas crédito y notas débito, y genera el libro de compras en Excel. Procesó un histórico de 681 documentos sin errores.",
     status: "🟢 Validado con datos reales",
     statusColor: "bg-green-50 text-green-700",
