@@ -33,7 +33,7 @@ export default function Footer() {
             </p>
             <p className="text-[#E8401C] font-bold text-lg mb-6">¡Conectando Juntos!</p>
             <div className="flex flex-wrap gap-2">
-              {["Expertos SAP +17 años","Odoo Partner","Google Cloud","Anthropic — Claude API"].map(p => (
+              {["Expertos SAP +17 años","Implementador Odoo","Google Cloud","Anthropic — Claude API"].map(p => (
                 <span key={p} className="bg-white/10 text-white/70 text-xs px-3 py-1.5 rounded-full border border-white/10">{p}</span>
               ))}
             </div>
