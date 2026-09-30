@@ -23,7 +23,7 @@ export default function CaseStudy() {
             IA en producción. Resultados reales.
           </h2>
           <p className="text-white/70 text-lg">
-            Piloto SRI GovTech — Chaparral, Tolima — Mayo 2026
+            Piloto SRI GovTech — Entidad territorial piloto — Mayo 2026
           </p>
         </div>
 

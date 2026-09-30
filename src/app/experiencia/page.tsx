@@ -16,7 +16,7 @@ const clients = [
 
 const aiProjects = [
   {
-    title: "SRI GovTech — Chaparral, Tolima",
+    title: "SRI GovTech — Entidad territorial piloto",
     date: "Mayo 2026",
     desc: "Motor RAG con Claude API + Vertex AI embeddings + pgvector. Vectorización completa del estatuto tributario municipal (275 páginas).",
     kpis: [["900","Artículos vectorizados"],["100","Brechas detectadas"],["$480M","COP recuperación"],["414%","ROI ICA"]],

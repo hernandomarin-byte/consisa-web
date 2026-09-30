@@ -25,7 +25,7 @@ const services = [
     icon: "⚖️",
     title: "SRI GovTech — IA Normativa",
     body: "De la norma al sistema. RAG sobre estatutos tributarios, brechas normativas automáticas y asistente jurídico 24/7 con Claude AI. Piloto validado: 900 artículos vectorizados, $480M COP de recuperación potencial.",
-    badge: "✅ Piloto validado — Chaparral 2026",
+    badge: "✅ Piloto validado — entidad territorial piloto 2026",
     badgeType: "success",
     cta: "Ver resultados →",
     href: "#chaparral",

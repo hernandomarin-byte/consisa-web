@@ -8,7 +8,7 @@ const differentiators = [
   {
     number: "02",
     title: "IA que ya opera, no que se promete",
-    body: "Piloto validado en Chaparral con resultados medibles. Sistema de facturación electrónica procesando 681 documentos con 100% de éxito. GRP Odoo operativo en Google Cloud. Producción, no laboratorio.",
+    body: "Piloto validado en una entidad territorial con resultados medibles. Sistema de facturación electrónica procesando 681 documentos con 100% de éxito. GRP Odoo operativo en Google Cloud. Producción, no laboratorio.",
     icon: "🤖",
   },
   {

@@ -11,6 +11,7 @@ const footerLinks = {
     { label: "BPO Proyectos", href: "/servicios" },
   ],
   Empresa: [
+    { label: "Productos Agencia IA", href: "/productos" },
     { label: "Quiénes Somos", href: "/nosotros" },
     { label: "Equipo", href: "/equipo" },
     { label: "Experiencia", href: "/experiencia" },
