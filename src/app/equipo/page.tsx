@@ -123,7 +123,7 @@ export default function EquipoPage() {
             {team.map((m, i) => (
               <div key={i} className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
                 {/* Photo */}
-                <div className="relative h-72 bg-gray-100 overflow-hidden">
+                <div className="relative aspect-[4/5] bg-gray-100 overflow-hidden">
                   {m.img ? (
                     <Image
                     src={m.img}
