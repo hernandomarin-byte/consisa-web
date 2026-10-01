@@ -33,7 +33,7 @@ const team = [
     initials: "GM",
     color: "bg-[#E8401C]",
     areas: ["Modelación Financiera","MFIP","Visión Internacional","Nuevos Negocios"],
-    img: "",
+    img: "/team/gabriel.jpg",
   },
   {
     name: "Mario Ricardo Cárdenas Barrero",
@@ -43,7 +43,7 @@ const team = [
     initials: "MC",
     color: "bg-indigo-600",
     areas: ["Regulación Minero-Energética","Gestión de Activos","Mantenimiento Predictivo","Gerencia de Proyectos"],
-    img: "",
+    img: "/team/mario.jpg",
   },
   {
     name: "Jorge Alberto Bravo Rubiano",
