@@ -50,7 +50,7 @@ export default function Home() {
             <span className="badge mb-4">Agencia IA</span>
             <h2 className="section-title mb-4">Productos que construimos para Colombia</h2>
             <p className="text-gray-500 text-lg max-w-2xl mx-auto">
-              GRP Odoo, MFIP, AHP (decisiones inteligentes, soportadas con AHP), FacturAP, SRI GovTech y GTTP: soluciones propias para el sector público.
+              GRP Odoo, MFIP, AHP Decision Maker, FacturAP, SRI GovTech y GTTP: soluciones propias para el sector público.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">

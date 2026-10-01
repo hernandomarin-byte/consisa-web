@@ -14,7 +14,7 @@ const consultoria = [
   {
     icon: "🏟️",
     title: "BPO Proyectos Complejos",
-    body: "Somos Operador BPO, no un outsourcer: operamos los procesos con una metodología propia de 10 módulos integrados para proyectos deportivos, inmobiliarios y de infraestructura.",
+    body: "Somos Operador BPO: operamos procesos completos de punta a punta, respondemos por resultados y KPIs contractuales, con plataforma propia (Odoo + IA) y relaciones de largo plazo. Metodología de 10 módulos integrados para proyectos deportivos, inmobiliarios y de infraestructura.",
     tags: ["ERP", "CRM", "Fiducia", "Control EPC"],
     img: "https://images.unsplash.com/photo-1459865264687-595d652de67e?w=800&q=80",
   },
@@ -23,7 +23,7 @@ const consultoria = [
 const agencia = [
   { icon: "📊", name: "GRP Odoo", desc: "Cadena de valor del gasto y del ingreso para entidades públicas." },
   { icon: "🏗️", name: "MFIP", desc: "Modelo financiero para la estructuración de proyectos." },
-  { icon: "⚖️", name: "AHP", desc: "Toma decisiones inteligentes y soportadas con AHP, el Proceso Analítico Jerárquico." },
+  { icon: "⚖️", name: "AHP Decision Maker", desc: "Toma decisiones inteligentes y soportadas con AHP, el Proceso Analítico Jerárquico." },
   { icon: "🧾", name: "FacturAP", desc: "Automatización de facturación electrónica recibida (DIAN UBL 2.1)." },
   { icon: "🔎", name: "SRI GovTech", desc: "IA normativa sobre estatutos tributarios territoriales." },
   { icon: "🗺️", name: "GTTP", desc: "Gestor Tributario Territorial Público." },

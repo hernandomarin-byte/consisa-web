@@ -3,7 +3,7 @@ const services = [
     icon: "🏛️",
     title: "Consultoría ERP — El proceso primero",
     body: "17 años implementando SAP nos dieron dominio profundo de los procesos del sector público. Hoy implementamos Odoo, SAP u otros ERPs con el mismo rigor. La tecnología cambia; el conocimiento del proceso es nuestro diferencial.",
-    badge: "SAP Partner · Odoo Implementador",
+    badge: "Implementador Odoo",
     badgeType: "default",
     cta: "Ver casos de éxito →",
     href: "#experiencia",

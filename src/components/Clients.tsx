@@ -10,9 +10,6 @@ const clients = [
 ];
 
 const partners = [
-  { name: "SAP Service Partner", icon: "🏆" },
-  { name: "RISE with SAP S/4HANA Cloud PE", icon: "☁️" },
-  { name: "Google Cloud Partner", icon: "🌐" },
   { name: "Anthropic — Claude API", icon: "🤖" },
 ];
 

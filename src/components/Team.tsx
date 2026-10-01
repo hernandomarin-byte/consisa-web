@@ -1,7 +1,7 @@
 const team = [
   {
     name: "Hernando Ferney Marín Rodríguez",
-    role: "CEO & Business Developer",
+    role: "CEO & Socio Fundador",
     specialty: "Magíster en Gobierno y Políticas Públicas. Consultor gobierno, finanzas multilaterales.",
     years: "+30 años",
     initials: "HM",
@@ -14,14 +14,6 @@ const team = [
     years: "30 años",
     initials: "LO",
     color: "bg-purple-600",
-  },
-  {
-    name: "Jaime Andrés Ortega Mazorra",
-    role: "Consultor Senior Gestión Pública",
-    specialty: "MIPG, Sistemas de Gestión, coautor MECI y NTCSP-1000.",
-    years: "+31 años",
-    initials: "JO",
-    color: "bg-teal-600",
   },
   {
     name: "Jorge Alberto Bravo Rubiano",

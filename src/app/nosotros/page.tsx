@@ -13,7 +13,7 @@ const eraSap = [
 const eraIA = [
   "Odoo 17 como plataforma ERP moderna, flexible y asequible",
   "Creación de la unidad Agencia IA: productos propios en lugar de proyectos a la medida",
-  "GRP Odoo, MFIP, plataforma AHP, FacturAP, SRI GovTech y GTTP",
+  "GRP Odoo, MFIP, AHP Decision Maker, FacturAP, SRI GovTech y GTTP",
   "Modelo BPO Operador de 10 módulos para proyectos complejos",
   "IA Generativa con Claude API y Vertex AI aplicada a normativa, facturación y decisiones",
 ];
@@ -21,7 +21,7 @@ const eraIA = [
 const productos = [
   { name: "GRP Odoo", desc: "Cadena de valor del gasto y del ingreso" },
   { name: "MFIP", desc: "Modelo financiero para estructurar proyectos" },
-  { name: "AHP", desc: "Decisiones inteligentes, soportadas con AHP" },
+  { name: "AHP Decision Maker", desc: "Decisiones inteligentes, soportadas con AHP" },
   { name: "FacturAP", desc: "Automatización de facturación electrónica recibida" },
   { name: "SRI GovTech", desc: "IA normativa" },
   { name: "GTTP", desc: "Gestor tributario territorial" },

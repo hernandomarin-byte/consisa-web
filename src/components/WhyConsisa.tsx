@@ -32,7 +32,7 @@ const differentiators = [
   {
     number: "06",
     title: "La experiencia SAP, la agilidad de Odoo, la inteligencia de la IA",
-    body: "Tres capacidades únicas combinadas: credenciales SAP S/4HANA que respaldan nuestra expertise en procesos, Odoo como plataforma moderna y asequible, e IA Generativa que multiplica el valor de ambas.",
+    body: "Tres capacidades únicas combinadas: más de 17 años de experiencia en procesos de negocio del sector público, Odoo como plataforma moderna y asequible, e IA Generativa que multiplica el valor de ambas.",
     icon: "⚡",
   },
 ];
@@ -82,7 +82,7 @@ export default function WhyConsisa() {
               las trincheras del sector público colombiano durante 17 años."
             </blockquote>
             <div className="text-white/70 font-medium">
-              — Hernando Ferney Marín Rodríguez, CEO & Business Developer
+              — Hernando Ferney Marín Rodríguez, CEO & Socio Fundador
             </div>
           </div>
         </div>

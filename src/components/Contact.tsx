@@ -62,7 +62,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="font-bold text-consisa-dark">Hernando Ferney Marín Rodríguez</p>
-                  <p className="text-gray-500 text-sm">CEO & Business Developer</p>
+                  <p className="text-gray-500 text-sm">CEO & Socio Fundador</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">

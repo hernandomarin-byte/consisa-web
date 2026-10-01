@@ -5,16 +5,19 @@ import Link from "next/link";
 
 const sapTimeline = [
   { year: "2008–2009", entity: "Gobernación de Cundinamarca", desc: "Soporte funcional especializado para el cierre de vigencia 2008 y la apertura de 2009 en el sistema SAP." },
-  { year: "2010", entity: "Gobernación de Cundinamarca", desc: "Actualización de procesos y plan de gestión del cambio para la estabilización y sostenibilidad del sistema SAP." },
-  { year: "2010", entity: "Gobernación del Valle del Cauca", desc: "Banco de proyectos y gestión de proyectos con SAP Project System (PS): gestión del cambio, ajuste de procesos y soporte pos-productivo." },
-  { year: "2012", entity: "Autoridad Nacional de Televisión — ANTV", desc: "Asesoría financiera, presupuestal y económica en la elaboración del Estatuto Presupuestal." },
-  { year: "2013–2014", entity: "Municipio de Santiago de Cali — EMCALI", desc: "Gerencia de proyecto y gestión del cambio del módulo PS; consultoría funcional SAP en rentas (PSCD) y core financiero." },
-  { year: "2015–2024", entity: "Automatización de procesos en Cali", desc: "Solución BPM de SAP para automatizar e integrar los procesos de Catastro e Impuesto Predial en la Alcaldía de Cali (World Bank — IFC)." },
-  { year: "2015–2024", entity: "Instituto de Seguros Sociales — ISS", desc: "Solución para la autosostenibilidad del conocimiento funcional y misional de los aplicativos, en la transición hacia Colpensiones." },
+  { year: "2009–2010", entity: "Instituto de Seguros Sociales — ISS", desc: "Consultoría para la sostenibilidad del conocimiento funcional y misional de los aplicativos, en la transición hacia Colpensiones." },
+  { year: "2010", entity: "Gobernación de Cundinamarca — PNUD", desc: "Actualización de procesos y plan de gestión del cambio para la estabilización y sostenibilidad del sistema SAP." },
+  { year: "2010–2011", entity: "Gobernación del Valle del Cauca", desc: "Banco de proyectos y gestión de proyectos con SAP Project System (PS): gestión del cambio, ajuste de procesos y soporte pos-productivo." },
+  { year: "2012", entity: "Autoridad Nacional de Televisión — ANTV", desc: "Acompañamiento y asesoría financiera, presupuestal y económica en la elaboración del Estatuto Presupuestal." },
+  { year: "2013–2014", entity: "EMCALI", desc: "Consultoría funcional SAP en rentas (PSCD) y core financiero." },
+  { year: "2015", entity: "Alcaldía de Santiago de Cali — Banco Mundial (IFC)", desc: "Simplificación de trámites tributarios y automatización de procesos de Catastro e Impuesto Predial." },
   { year: "2016", entity: "Gobernación del Valle del Cauca", desc: "Actualización de New GL en SAP y mejora del banco de proyectos de inversión en los módulos PS y PPM." },
-  { year: "2015–2024", entity: "Gobernación del Valle — Gestión de deudores", desc: "Solución SAP para identificar y controlar los deudores por cada concepto de las rentas departamentales." },
-  { year: "2015–2024", entity: "IMPRETIC EICE", desc: "Mantenimiento evolutivo, soporte y sostenibilidad de herramientas de información financiera: deudores, contratación, deuda pública y tesorería." },
-  { year: "2020–2023", entity: "Gobernación del Valle — Plan de Desarrollo", desc: "Actualización del sistema de gestión financiero territorial para el Plan “Valle Invencible”." },
+  { year: "2016–2017", entity: "Empresa de Recursos Tecnológicos — ERT, Cali", desc: "Consultoría de implementación y soporte de soluciones SAP." },
+  { year: "2018–2019", entity: "Gobernación del Valle — Gestión de deudores", desc: "Análisis, implementación y ajuste de la solución SAP para identificar y controlar los deudores por cada concepto de las rentas departamentales." },
+  { year: "2020–2023", entity: "IMPRETIC EICE — Gobernación del Valle", desc: "Mantenimiento evolutivo, soporte y sostenibilidad de herramientas de información financiera, y actualización del sistema para el Plan de Desarrollo “Valle Invencible”." },
+  { year: "2020–2023", entity: "Alcaldía de Santiago de Cali — Hacienda", desc: "Adopción del catálogo presupuestal CCPET, servicios profesionales especializados en SAP y ajustes al módulo de gestión tributaria." },
+  { year: "2022", entity: "INFOTIC S.A.", desc: "Servicios especializados de consultoría y soporte." },
+  { year: "2023", entity: "Red SUMMA — proyecto Gobernación del Valle", desc: "Optimización del RUT y contactabilidad en la transformación digital tributaria." },
 ];
 
 const aiProjects = [

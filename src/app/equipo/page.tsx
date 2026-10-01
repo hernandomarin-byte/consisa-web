@@ -7,7 +7,7 @@ import Image from "next/image";
 const team = [
   {
     name: "Hernando Ferney Marín Rodríguez",
-    role: "CEO & Business Developer",
+    role: "CEO & Socio Fundador",
     specialty: "Magíster en Gobierno y Políticas Públicas. Consultor en gobierno, finanzas multilaterales y junta directiva.",
     years: "+30 años",
     initials: "HM",
@@ -18,22 +18,32 @@ const team = [
   {
     name: "Luz Angela Osorio Castaño",
     role: "Arquitecta de Soluciones",
-    specialty: "Especialista SAP-ERP con dominio profundo de las mejores prácticas del sector público y privado colombiano.",
+    specialty: "Arquitecta de soluciones empresariales con dominio profundo de ERP y de las mejores prácticas del sector público y privado colombiano.",
     years: "30 años",
     initials: "LO",
     color: "bg-purple-600",
-    areas: ["SAP S/4HANA","Arquitectura ERP","Sector Público","Mejores Prácticas"],
+    areas: ["Procesos ERP","Arquitectura de Soluciones","Sector Público","Mejores Prácticas"],
     img: "/team/luz-angela.png",
   },
   {
-    name: "Jaime Andrés Ortega Mazorra",
-    role: "Consultor Senior Gestión Pública",
-    specialty: "Experto en MIPG y Sistemas de Gestión. Coautor del MECI y la NTCSP-1000. Referente nacional en calidad del sector público.",
-    years: "+31 años",
-    initials: "JO",
-    color: "bg-teal-600",
-    areas: ["MIPG","MECI","NTCSP-1000","Sistemas de Gestión"],
-    img: "/team/jaom.png",
+    name: "Gabriel Andrés Marín Moscoso",
+    role: "Socio & Líder del Proyecto MFIP",
+    specialty: "Administrador de Negocios (Universidad San Buenaventura, en curso). Lidera el MFIP, la herramienta con la que CONSISA estructura financieramente su portafolio. Exfutbolista profesional y piloto privado de aviación y de drones: aporta una visión internacional a CONSISA.",
+    years: "",
+    initials: "GM",
+    color: "bg-[#E8401C]",
+    areas: ["Modelación Financiera","MFIP","Visión Internacional","Nuevos Negocios"],
+    img: "",
+  },
+  {
+    name: "Mario Ricardo Cárdenas Barrero",
+    role: "Líder de Innovación y Desarrollo",
+    specialty: "Ingeniero Electricista. Magíster en Regulación Minero-Energética (U. Externado) y Especialista en Administración (U. del Rosario). Experto en regulación minera, petrolera y energética, gestión de activos y gerencia de proyectos y contratos.",
+    years: "+20 años",
+    initials: "MC",
+    color: "bg-indigo-600",
+    areas: ["Regulación Minero-Energética","Gestión de Activos","Mantenimiento Predictivo","Gerencia de Proyectos"],
+    img: "",
   },
   {
     name: "Jorge Alberto Bravo Rubiano",
@@ -86,7 +96,7 @@ export default function EquipoPage() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
             {[
               ["27 años","Promedio de experiencia"],
-              ["6","Expertos senior"],
+              ["7","Líderes y expertos"],
               ["170+","Años de experiencia combinada"],
               ["8+","Entidades públicas nacionales"],
             ].map(([v,l],i) => (
@@ -114,21 +124,27 @@ export default function EquipoPage() {
               <div key={i} className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
                 {/* Photo */}
                 <div className="relative h-72 bg-gray-100 overflow-hidden">
-                  <Image
+                  {m.img ? (
+                    <Image
                     src={m.img}
                     alt={m.name}
                     fill
                     className="object-cover object-top"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
+                  ) : (
+                    <div className={`absolute inset-0 ${m.color} flex items-center justify-center text-white font-black text-6xl opacity-90`}>{m.initials}</div>
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-[#003087]/70 via-transparent to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between">
                     <div className={`w-12 h-12 ${m.color} rounded-xl flex items-center justify-center text-white font-black text-sm shadow-lg`}>
                       {m.initials}
                     </div>
-                    <span className="bg-white/90 text-[#003087] text-xs font-bold px-3 py-1.5 rounded-full shadow">
-                      {m.years}
-                    </span>
+                    {m.years && (
+                      <span className="bg-white/90 text-[#003087] text-xs font-bold px-3 py-1.5 rounded-full shadow">
+                        {m.years}
+                      </span>
+                    )}
                   </div>
                 </div>
                 {/* Info */}
