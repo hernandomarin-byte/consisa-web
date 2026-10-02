@@ -13,7 +13,7 @@ const team = [
     initials: "HM",
     color: "bg-[#003087]",
     areas: ["Gobierno y Políticas Públicas","Finanzas Multilaterales","Estrategia Empresarial","Transformación Digital"],
-    img: "/team/hmarin.png",
+    img: "/team/hmarin.jpg",
   },
   {
     name: "Luz Angela Osorio Castaño",
@@ -23,7 +23,7 @@ const team = [
     initials: "LO",
     color: "bg-purple-600",
     areas: ["Procesos ERP","Arquitectura de Soluciones","Sector Público","Mejores Prácticas"],
-    img: "/team/luz-angela.png",
+    img: "/team/luz-angela.jpg",
   },
   {
     name: "Gabriel Andrés Marín Moscoso",
@@ -53,7 +53,7 @@ const team = [
     initials: "JB",
     color: "bg-[#00A86B]",
     areas: ["Tributación Municipal","ICA y Predial","Modernización Fiscal","DIAN"],
-    img: "/team/jorge.png",
+    img: "/team/jorge.jpg",
   },
   {
     name: "Sandra Luengas Aponte",
@@ -63,7 +63,7 @@ const team = [
     initials: "SL",
     color: "bg-rose-600",
     areas: ["Ciencia de Datos","Inteligencia Artificial","TIC","Políticas Públicas Digitales"],
-    img: "/team/sandra.png",
+    img: "/team/sandra.jpg",
   },
   {
     name: "Clara Inés Osorio Morales",
@@ -73,7 +73,7 @@ const team = [
     initials: "CO",
     color: "bg-amber-600",
     areas: ["NIIF","Finanzas Públicas","Control Interno","Presupuesto Público"],
-    img: "/team/clara.png",
+    img: "/team/clara.jpg",
   },
 ];
 
